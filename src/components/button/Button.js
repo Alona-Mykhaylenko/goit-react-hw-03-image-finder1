@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Button = ({ fetchImagesProp }) => {
   return (
     <button type="button" className="LoadMore-button" onClick={fetchImagesProp}>
@@ -7,3 +9,7 @@ const Button = ({ fetchImagesProp }) => {
 };
 
 export default Button;
+
+Button.propTypes = {
+  fetchImagesProp: PropTypes.func.isRequired,
+};

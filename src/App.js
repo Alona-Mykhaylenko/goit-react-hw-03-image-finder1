@@ -63,7 +63,7 @@ class App extends Component {
 
   render() {
     const { images, loading, showModal, chosenImage } = this.state;
-    console.log(chosenImage);
+
     return (
       <div>
         <Searchbar onSubmit={this.handleSearchWord} />
@@ -93,5 +93,3 @@ class App extends Component {
 }
 
 export default App;
-
-// 21692451-3e70a23032844ea22d5e1eb16
