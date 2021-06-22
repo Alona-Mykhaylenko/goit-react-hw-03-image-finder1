@@ -49,8 +49,8 @@ class App extends Component {
   };
 
   openModal = (clickedImage) => {
-    this.setState({ showModal: true });
     this.setState({
+      showModal: true,
       chosenImage: this.state.images.find(
         (image) => image.webformatURL === clickedImage
       ),
@@ -68,7 +68,7 @@ class App extends Component {
       <div>
         <Searchbar onSubmit={this.handleSearchWord} />
         <ImageGallery imagesProp={images} openModalProp={this.openModal} />
-        {images.length > 0 && !loading && (
+        {images.length && !loading && (
           <Button fetchImagesProp={this.fetchImages} />
         )}
         {loading && (
